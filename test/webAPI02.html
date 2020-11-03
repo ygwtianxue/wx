@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>生成表格</title>
+    <style>
+        table {
+            width: 600px;
+        }
+        
+        table td {
+            text-align: center;
+        }
+        
+        table thead {
+            background-color: purple;
+        }
+        
+        table tbody {
+            background-color: pink;
+        }
+        
+        .cur {
+            background-color: royalblue;
+        }
+    </style>
+</head>
+
+<body>
+    请输入姓名:<input type="text" name="name" value="" placeholder="xx"><br> 请输入邮箱:
+    <input type="text" name="name" value="" placeholder="xx"><br>
+    <button>添加</button>
+
+
+    <table border="1" cellpadding='0' cellspacing="0">
+        <thead>
+            <tr>
+                <th>姓名</th>
+                <th>邮箱</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>ss</td>
+                <td>ss</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        //事件源
+        var inputs = document.querySelectorAll("input");
+
+        var btn = document.querySelector("button");
+
+        var tbody = document.querySelector("table").children[1];
+
+        // btn.onclick = function() {
+        //     // console.log(inputs[0].value);
+        //     // console.log(inputs[1].value);
+
+        //     var name = inputs[0].value;
+        //     var email = inputs[1].value;
+
+        //     var td_name = document.createElement("td");
+        //     td_name.innerText = name;
+        //     var td_email = document.createElement("td");
+        //     td_email.innerText = email;
+        //     var tr = document.createElement("tr");
+
+        //     tr.appendChild(td_name);
+        //     tr.appendChild(td_email);
+
+        //     tbody.appendChild(tr);
+
+        // }
+        //tbody.addEventListener();
+
+        btn.onclick = function() {
+            // console.log(inputs[0].value);
+            // console.log(inputs[1].value);
+
+            var name = inputs[0].value;
+            var email = inputs[1].value;
+            var thtml = ' <tr><td>' + name + '</td><td>' + email + '</td> </tr>';
+            tbody.innerHTML = tbody.innerHTML + thtml;
+            var trs = tbody.querySelectorAll('tr');
+            console.log(trs);
+
+            for (var i = 0; i < trs.length; i++) {
+
+                trs[i].onmouseover = function() {
+                    console.log(1);
+
+                    this.className = 'cur';
+                }
+
+                trs[i].onmouseout = function() {
+                    this.className = '';
+                }
+            }
+
+        }
+    </script>
+</body>
+
+</html>

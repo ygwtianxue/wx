@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0,user-scalable=no">
+    <title>东港-首页</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
+
+    <script src="js/lib-flexible-2.0/index.min.js"></script>
+    <script src="js/jquery/jquery3.5.1.min.js"></script>
+    <script>
+        //$('.pao')
+        $(function() {
+
+            var touchstartX = 0;
+            var curTranx = 0; //当前移动的距离
+            var curmove = 0; //每次移动的距离
+
+            //最大允许的移动距离
+            var maxX = $(document.body).width() - $('.pao').outerWidth(true);
+            var paowidth = $('.pao').outerWidth(true);
+            var screenwidth = $(document.body).width();
+            console.log(paowidth, screenwidth, maxX);
+            $('.pao').on('touchstart', function(e) {
+                e.preventDefault();
+                console.log(e);
+                console.log(e.touches[0].clientX);
+                touchstartX = e.touches[0].clientX;
+            })
+
+            $('.pao').on('touchmove', function(e) {
+                curmove = 0;
+                e.preventDefault();
+
+                console.log(e);
+                console.log(e.changedTouches[0].clientX);
+                var touchmoveX = e.changedTouches[0].clientX;
+
+                //获取手指滑动的距离， 为负数则是往左移动，为正数往右移动
+                var move = touchmoveX - touchstartX;
+                // 综合当前已经移动的距离加上当次移动的距离
+                curmove = curTranx + move;
+                //如果合计只大于0 则 设置为0 已经到了最左端了
+                curmove = curmove > 0 ? 0 : curmove;
+                //如果合计只小于 最大移动距离 则 设置为最大移动距离只 已经到了最右端了
+                curmove = curmove < maxX ? maxX : curmove;
+                $('.pao').css('transform', 'translateX(' + curmove + 'px)');
+            })
+
+            $('.pao').on('touchend', function(e) {
+                e.preventDefault();
+                curTranx = curmove;
+            })
+        })
+    </script>
+
+</head>
+
+<body>
+    <!-- 搜索 -->
+    <div class="serch">
+        请输入商品或店铺名称
+    </div>
+
+    <!-- banner -->
+    <div class="banner">
+        <img src="img/banner.jpg" alt="宣传图">
+    </div>
+
+    <!-- 导航 -->
+    <nav class="mainnav ">
+        <ul class="clearfix">
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <div class="img_hots">
+                        <img src="upload/hots1.jpg" alt="">
+                    </div>
+                    热门推荐
+                </a>
+            </li>
+
+            <!-- <li>
+                <a href="#">
+                    <i class="icon-1"></i> 热门推荐
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-2"></i> 手机数码
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-3"></i>珠宝饰品
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-4"></i>母婴童装
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-5"></i>女生衣橱
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-6"></i>日用百货
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-6"></i> 重奢甄选
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-7"></i>美妆护肤
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-8"></i>医药保健
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="icon-10"></i>全部项目
+                </a>
+            </li> -->
+        </ul>
+    </nav>
+
+
+    <!-- 优惠专场 -->
+    <div class="box">
+        <h2>优惠专场</h2>
+
+        <div class="goods ">
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+        </div>
+
+        <div class="goods item3">
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="">
+                </div>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500-200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500-200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="">
+                </div>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500-200</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 销售榜单 -->
+    <div class="box hots">
+        <h2>销售榜单</h2>
+        <div class="pao">
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <span class="info">CHARLES＆KEITH酒神包单肩斜挎小方包女</span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="">
+                </div>
+                <span class="info">小方包女</span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <span class="info">CHARLES＆KEITH酒神包单肩斜挎小方包女</span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="">
+                </div>
+                <span class="info">CHARLES＆KEITH酒神包单肩斜挎小方包女</span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 好店推荐-精选商品 -->
+    <section class="recommend">
+        <ul class="tabselect">
+            <li class="cur"><a href="#">好店推荐</a></li>
+            <li><a href="#">精选商品</a></li>
+        </ul>
+
+        <ul class="shop">
+            <li>
+                <!-- 店铺信息 -->
+                <div class="shop-hd">
+                    <img src="upload/shoplog.png" alt="店铺logo">
+                    <h3>CHANEL香奈儿</h3>
+                    <div class="cuxiao">
+                        <span class="info_zhekou">7折起</span>
+                        <span class="info_manjian">满500减200</span>
+                        <span class="info_zeng">赠</span>
+                    </div>
+                    <a href="#">进店逛逛</a>
+                </div>
+                <div class="shop-img">
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="shop-count">
+                    <span>销量2131523</span><i>美妆护肤</i><i>美妆护肤</i>
+                </div>
+            </li>
+
+            <li>
+                <!-- 店铺信息 -->
+                <div class="shop-hd">
+                    <img src="upload/shoplog.png" alt="店铺logo">
+                    <h3>CHANEL香奈儿</h3>
+                    <div class="cuxiao">
+                        <span class="info_zhekou">7折起</span>
+                        <span class="info_manjian">满500减200</span>
+                        <span class="info_zeng">赠</span>
+                    </div>
+                    <a href="#">进店逛逛</a>
+                </div>
+                <div class="shop-img">
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                    <a href="#">
+                        <div class="good_img">
+                            <img src="upload/kh_goods.jpg" alt="产品名称">
+                        </div>
+                        <p><del>HK$360</del>
+                            <span>HK$360</span>
+                        </p>
+                    </a>
+                </div>
+                <div class="shop-count">
+                    <span>销量2131523</span><i>美妆护肤</i><i>美妆护肤</i>
+                </div>
+            </li>
+        </ul>
+
+        <div class="goods">
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="产品名称">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="产品名称">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/product_01.jpg" alt="">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+            <a href="#">
+                <div class="good_img">
+                    <img src="upload/kh_goods.jpg" alt="产品名称">
+                </div>
+                <span class="info">
+                    CHANCE EAU VIVE 香奈儿邂逅活力淡香水(100ML)
+                </span>
+                <div class="price">
+                    <span>HK$158.63</span>
+                    <span>500减200</span>
+                </div>
+            </a>
+        </div>
+
+    </section>
+
+
+
+    <!-- 底部导航栏 -->
+    <nav class="bottomnav">
+        <a href="#" class="homelink cur">首页</a>
+        <a href="#" class="classlink">分类</a>
+        <a href="#" class="orderlink">订单</a>
+        <a href="#" class="mylink">我的</a>
+    </nav>
+
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximun-scale=1.0,minimun-scale=1.0,user-scalable=no">
+    <title>东港-注册</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/loginregister.css">
+    <script src="js/lib-flexible-2.0/index.min.js"></script>
+</head>
+
+<body>
+    <!-- logo  -->
+    <div class="logo">
+        <h2>
+            東港
+        </h2>
+        <span>东港海淘</span>
+    </div>
+
+    <form action="#" method="POST">
+        <ul class="account">
+            <li>
+                <span>手机号</span>
+                <select name="teltype">
+                    <option value="1">+86</option>
+                    <option value="1">+852</option>
+                 </select>
+                <input type="tel" name="phone" id="" class="phone" placeholder="手机号">
+            </li>
+            <li>
+                <span>验证码</span>
+                <input type="password" name="yzm" id="" placeholder="验证码">
+                <a href="javascript:;" class="yzmbtn">获取验证码</a>
+            </li>
+            <li>
+                <span>密码</span>
+                <input type="password" name="pwd" id="" placeholder="密码">
+            </li>
+            <li></li>
+        </ul>
+        <input type="submit" value="注册" class="loginbtn">
+        <p class="already">已有账号？返回<a href="login.html">登录</a></p>
+    </form>
+
+    <script>
+        var btn = document.querySelector('.yzmbtn');
+        var time = 6;
+        btn.addEventListener('click', function() {
+            this.innerHTML = '已发送';
+            btn.disabled = true;
+            var timer = setInterval(function() {
+                if (time === 0) {
+                    clearInterval(timer);
+                    btn.disabled = false;
+                    time = 6;
+                    btn.innerHTML = '获取验证码';
+                } else {
+                    btn.innerHTML = time + 's';
+                    time--;
+                }
+            }, 1000)
+        })
+    </script>
+</body>
+
+</html>

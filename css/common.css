@@ -1,0 +1,337 @@
+@media screen and (min-width:750px) {
+    html {
+        font-size: 75px!important;
+    }
+}
+
+
+/* 去掉所有的外边距和内边距 */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* 去掉li的小店 */
+
+li {
+    list-style: none;
+}
+
+
+/* 去掉a的下划线 */
+
+a {
+    text-decoration: none;
+}
+
+
+/* em和i的字体默认不倾斜 */
+
+em,
+i {
+    font-style: normal;
+}
+
+
+/* 图片去掉边框，与文字垂直居中 */
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+button,
+input {
+    font-family: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+}
+
+
+/* body */
+
+body {
+    min-width: 4.266667rem;
+    max-width: 10rem;
+    width: 100%;
+    /* height: 3000px; */
+    margin: 0 auto;
+    /* background-color: #fafafa; */
+    background-color: #f2f2f2;
+    /* background-color: #f3f1de; */
+    /* 12px/1.5  */
+    font: 'Microsoft YaHei', 'Heiti SC', tahoma, arial, 'Hiragino Sans GB', \\5B8B\4F53, sans-serif;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+
+/* 按钮变成小点 */
+
+button {
+    cursor: pointer;
+}
+
+
+/* 清除浮动 */
+
+.clearfix:after {
+    content: "";
+    display: none;
+    visibility: hidden;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+
+/* 阿里字体图标  */
+
+@font-face {
+    font-family: 'iconfont';
+    src: url('../font/iconfont.eot');
+    src: url('../font/iconfont.eot?#iefix') format('embedded-opentype'), url('../font/iconfont.woff2') format('woff2'), url('../font/iconfont.woff') format('woff'), url('../font/iconfont.ttf') format('truetype'), url('../font/iconfont.svg#iconfont') format('svg');
+}
+
+.iconfont {
+    font-family: "iconfont" !important;
+    font-size: 16px;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* 底部导航栏 start */
+
+.bottomnav {
+    position: fixed;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.6rem;
+    display: flex;
+    border-top: 2px solid #f6f6f6;
+    background-color: #ffffff;
+}
+
+.bottomnav a {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    font-size: .32rem;
+    color: rgb(53, 52, 52);
+}
+
+.bottomnav a.cur {
+    color: rgb(243, 37, 85);
+}
+
+.homelink::before {
+    content: "\e600";
+    font-family: "iconfont" !important;
+    display: block;
+    margin: .1rem auto;
+    width: .56rem;
+    height: .56rem;
+    font-size: .5rem;
+}
+
+.classlink::before {
+    content: "\e619";
+    font-family: "iconfont" !important;
+    display: block;
+    margin: .1rem auto;
+    width: .56rem;
+    height: .56rem;
+    font-size: .5rem;
+}
+
+.orderlink::before {
+    content: "\e60d";
+    font-family: "iconfont" !important;
+    display: block;
+    margin: .1rem auto;
+    width: .56rem;
+    height: .56rem;
+    font-size: .5rem;
+}
+
+.mylink::before {
+    content: "\e60b";
+    font-family: "iconfont" !important;
+    display: block;
+    margin: .1rem auto;
+    width: .56rem;
+    height: .56rem;
+    font-size: .5rem;
+}
+
+
+/* 底部导航栏 end */
+
+
+/* 顶部返回  */
+
+.goback_box {
+    position: relative;
+    background-color: #fff;
+    height: 1.6rem;
+    line-height: 1.6rem;
+    text-align: center;
+    color: #333;
+    font-size: .426667rem;
+}
+
+.goback_box_icon {
+    position: absolute;
+    left: .2rem;
+    font-family: "iconfont" !important;
+    font-size: .6rem;
+    font-style: normal;
+    vertical-align: middle;
+    color: #999;
+}
+
+.goback_box_icon_fff {
+    color: #fff;
+}
+
+
+/* 修改盒子 */
+
+.editbox {
+    background-color: #fff;
+    margin-top: .2rem;
+}
+
+.additem {
+    padding-left: .333333rem;
+    display: flex;
+    height: 1.733333rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.additem :nth-child(1) {
+    display: block;
+    width: 4rem;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    font-size: .4rem;
+}
+
+.additem :nth-child(2) {
+    flex: 1;
+    padding-left: .1rem;
+    outline: none;
+    border: 0;
+    font-size: .373333rem;
+}
+
+.editsave {
+    display: block;
+    margin: 1.2rem auto;
+    width: 8.533333rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: #f32555;
+    color: #fff;
+    text-align: center;
+    font-size: .426667rem;
+    border-radius: .2rem;
+}
+
+
+/* 订单店铺底部结算 */
+
+.order_footer {
+    display: flex;
+    position: fixed;
+    height: 1.466667rem;
+    width: 10rem;
+    background-color: #fff;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    /* border-top: 1px solid #999; */
+    box-shadow: 0 -1px 1px #ccc;
+    z-index: 3;
+}
+
+.order_footer span {
+    flex: 1;
+    color: #f32555;
+    font-size: .4rem;
+    text-align: center;
+    line-height: 1.466667rem;
+}
+
+.order_footer a {
+    width: 1.5rem;
+    font-size: .266667rem;
+    text-align: center;
+    color: #333;
+}
+
+.order_footer a::before {
+    content: "\e69b";
+    font-family: "iconfont" !important;
+    display: block;
+    margin: .1rem auto;
+    width: .56rem;
+    height: .56rem;
+    font-size: .5rem;
+    color: #333;
+}
+
+a.icon_dianpu::before {
+    font-size: .4rem;
+    content: '\e69b';
+}
+
+a.icon_lianxi::before {
+    content: '\e624';
+}
+
+a.icon_car::before {
+    content: '\e69a';
+}
+
+.icon_car {
+    position: relative;
+}
+
+.icon_car i {
+    position: absolute;
+    top: 0;
+    right: 0.2rem;
+    font-size: .213333rem;
+    background-color: #f32555;
+    color: #fff;
+    border-radius: 50%;
+    padding: 0 3px;
+}
+
+.order_footer a.btn_jiesuan::before {
+    display: none;
+}
+
+.order_footer a.btn_jiesuan {
+    margin: .2rem;
+    text-align: center;
+    height: .96rem;
+    line-height: .96rem;
+    width: 2.666667rem;
+    background-color: #f32555;
+    border-radius: .466667rem;
+    color: #fff;
+    font-size: .426667rem;
+}

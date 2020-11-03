@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button value="1">一星</button>
+    <button value="2">一星</button>
+    <button value="3">一星</button>
+    <button value="4">一星</button>
+    <button value="5">一星</button>
+
+    <script>
+        var wxbtns = document.getElementsByTagName('button');
+
+        for (var i = 0; i < wxbtns.length; i++) {
+            wxbtns[i].onclick = function() {
+
+                console.log(this.value);
+                for (var j = 0; j < wxbtns.length; j++) {
+                    wxbtns[j].style.backgroundColor = '#fff';
+                    if (j < this.value) {
+                        wxbtns[j].style.backgroundColor = 'pink';
+                    }
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>

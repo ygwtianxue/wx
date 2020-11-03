@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="abc">asdfsa</div>
+    <script>
+        var abc = document.getElementById('abc');
+        console.log(abc);
+        console.dir(abc);
+
+        abc.style.backgroundPosition = '0  -40px';
+
+        abc.className
+    </script>
+
+    <ul>
+        <li>帅哥1</li>
+        <li>帅哥2</li>
+        <li>帅哥3</li>
+        <li>帅哥4</li>
+        <li class="shuaige">帅哥5</li>
+    </ul>
+    <ul id="liangmei">
+        <li>靓妹1</li>
+        <li>靓妹2</li>
+        <li>靓妹3</li>
+        <li>靓妹4</li>
+        <li class="shuaige">帅哥5</li>
+    </ul>
+
+
+    <div class="box">难</div>
+    <div class="box">女</div>
+
+    <script>
+        var lis = document.getElementsByTagName('li');
+        console.log(lis);
+
+        var clashuaige = document.getElementsByClassName('shuaige');
+        console.log(clashuaige[0]);
+
+        var liangmei = document.getElementById('liangmei');
+        var lms = liangmei.getElementsByTagName('li');
+        console.log(lms);
+
+        var box1 = document.querySelector('.box');
+        console.log(box1);
+        var boxall = document.querySelectorAll('.box');
+        console.log(boxall);
+
+
+        clashuaige[0].style.backgroundColor = 'pink';
+    </script>
+</body>
+
+</html>

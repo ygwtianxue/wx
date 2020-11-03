@@ -1,0 +1,114 @@
+/* account  登录 注册  */
+
+body {
+    background-color: #fff;
+}
+
+
+/* logo */
+
+.logo {
+    text-align: center;
+}
+
+.logo h2 {
+    width: 1.973333rem;
+    height: 1.973333rem;
+    background-color: rgb(243, 37, 85);
+    line-height: 2rem;
+    color: #fff;
+    font-size: .8rem;
+    text-align: center;
+    border-radius: .3rem;
+    margin: 2.613333rem 4.053333rem .613333rem 3.973333rem;
+    font-weight: 400;
+}
+
+.logo span {
+    display: block;
+    height: .6rem;
+    line-height: .6rem;
+    font-size: .64rem;
+    color: rgb(51, 51, 51);
+    margin-bottom: 1.146667rem;
+}
+
+.account {
+    margin: 0 .773333rem 0 .826667rem;
+}
+
+.account li {
+    /* display: flex; */
+    overflow: hidden;
+    height: 2rem;
+    border-bottom: 1px solid #ececec;
+}
+
+.account li span {
+    display: inline-block;
+    font-size: .4rem;
+    line-height: 3rem;
+    width: 2rem;
+}
+
+.account li select {
+    border: 0;
+    font-size: .4rem;
+}
+
+.account input {
+    width: 4.8rem;
+    outline: none;
+    border: 0;
+    font-size: .4rem;
+}
+
+.account li:last-child {
+    border: 0;
+    text-align: right;
+}
+
+.account li:last-child a {
+    font-size: .32rem;
+    color: rgb(243, 37, 85);
+}
+
+.loginbtn {
+    box-sizing: border-box;
+    outline: 0;
+    border: 0;
+    display: block;
+    background-color: rgb(243, 37, 85);
+    width: 8rem;
+    height: 1.093333rem;
+    line-height: 1.093333rem;
+    font-size: .48rem;
+    text-align: center;
+    border-radius: .56rem;
+    margin: 0 auto;
+}
+
+.regbtn {
+    background-color: #fff;
+    border: 1px solid rgb(243, 37, 85);
+    color: rgb(243, 37, 85);
+    margin-top: .666667rem;
+}
+
+.yzmbtn {
+    font-size: .4rem;
+    color: #f32555;
+}
+
+.already {
+    font-size: .32rem;
+    text-align: center;
+    margin-top: .4rem;
+}
+
+.already a {
+    color: #f32555;
+}
+
+
+/* account  登录 注册  */

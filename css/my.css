@@ -1,0 +1,305 @@
+/* 我的 */
+
+header {
+    background: -webkit-gradient(linear, 0 0, 100% 0, from(#ff7856), to(#f32556));
+    height: 12.8rem;
+    position: relative;
+}
+
+.phone {
+    position: absolute;
+    top: 1.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.92rem;
+    height: 1.92rem;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+}
+
+header h3 {
+    position: absolute;
+    top: 4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: .48rem;
+    color: #fff;
+    font-weight: 400;
+}
+
+header ul {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #fff;
+    border-radius: .3rem 0.3rem 0 0;
+}
+
+header ul li {
+    height: 1.74rem;
+    line-height: 1.74rem;
+    font-size: .4rem;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.icon-my {
+    display: inline-block;
+    font-family: "iconfont" !important;
+    font-size: .6rem;
+    width: .8rem;
+    font-style: normal;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: #f32555;
+    margin: 0 .2rem;
+    line-height: 1.74rem;
+    vertical-align: middle;
+}
+
+header ul li a {
+    color: #333;
+    font-weight: 700;
+}
+
+
+/* 我的身份证 */
+
+.card_info {
+    margin-top: .2rem;
+    background-color: #fff;
+}
+
+.card_info li {
+    display: flex;
+    height: 1.76rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f5f5f5;
+    line-height: 1.76rem;
+}
+
+.card_info li span {
+    margin: 0 auto;
+    width: 3rem;
+    box-sizing: border-box;
+    padding-left: .4rem;
+    font-size: .4rem;
+}
+
+.card_info li input {
+    flex: 1;
+    outline: none;
+    border: 0;
+    font-size: .4rem;
+}
+
+.sfzImg {
+    margin: .466667rem auto;
+    width: 8.533333rem;
+    height: 5.333333rem;
+}
+
+.sfzImg img {
+    width: 100%;
+}
+
+.savesfz {
+    margin: 0 auto;
+    display: block;
+    width: 8.533333rem;
+    height: 1.12rem;
+    line-height: 1.12rem;
+    text-align: center;
+    font-size: .426667rem;
+    color: #fff;
+    background-color: #f32555;
+    border-radius: .2rem;
+}
+
+
+/* 收货地址列表 */
+
+.addresslist {
+    margin-top: .2rem;
+    background-color: #fff;
+}
+
+.addresslist li {
+    position: relative;
+    height: 2.133333rem;
+    padding: .2rem .4rem;
+    border-bottom: 1px solid #f5f5f5;
+}
+
+.addressinfo {
+    height: 1.2rem;
+    width: 8.4rem;
+    font-size: .4rem;
+    line-height: 1.5;
+}
+
+.addresstel {
+    height: .533333rem;
+    line-height: .533333rem;
+    font-size: .32rem;
+    color: #666;
+}
+
+.address-zt {
+    display: inline-block;
+    color: #fff;
+    width: 1.5rem;
+    height: .4rem;
+    text-align: center;
+    margin-right: .2rem;
+    line-height: .4rem;
+    border-radius: .1rem;
+    background-color: #f32555;
+}
+
+.address-zy {
+    display: inline-block;
+    color: #fff;
+    width: 1.5rem;
+    height: .4rem;
+    text-align: center;
+    margin-right: .1rem;
+    line-height: .4rem;
+    border-radius: .1rem;
+    background-color: #ffc637;
+}
+
+.address_update {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: .333333rem;
+    font-family: "iconfont" !important;
+    font-size: .4rem;
+    width: .4rem;
+    color: #999;
+}
+
+.address_add {
+    display: block;
+    margin: 1.2rem auto;
+    width: 8.533333rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    background-color: #f32555;
+    color: #fff;
+    text-align: center;
+    font-size: .426667rem;
+    border-radius: .2rem;
+}
+
+.address_add::before {
+    display: inline-block;
+    content: '\e61f';
+    font-family: "iconfont" !important;
+    margin: 0 .2rem;
+}
+
+
+/* 添加收货地址 */
+
+.typeitem {
+    height: 1.733333rem;
+    box-sizing: border-box;
+    border-bottom: 1px solid #f3f3f3;
+    line-height: 1.733333rem;
+    padding-left: .333333rem;
+}
+
+.typeitem :nth-child(1) {
+    display: inline-block;
+    width: 4rem;
+    height: 1.733333rem;
+    line-height: 1.733333rem;
+    font-size: .4rem;
+}
+
+.typeitem :nth-child(1)::after {
+    display: inline-block;
+    content: '\e692';
+    font-family: "iconfont" !important;
+    color: #ccc;
+}
+
+.typeitem a {
+    display: inline-block;
+    background-color: #f1f1f1;
+    color: #999;
+    font-size: .32rem;
+    width: 1.733333rem;
+    height: .56rem;
+    line-height: .56rem;
+    margin: 0 .1rem;
+    text-align: center;
+    border-radius: .1rem;
+}
+
+.typeitem a.cur {
+    color: #fff;
+    background-color: #f32555;
+}
+
+.hint {
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+
+.hint_box {
+    position: relative;
+    width: 8rem;
+    height: 10.4rem;
+    margin: 4rem auto 0;
+    background-color: #fff;
+    border-radius: .1rem;
+}
+
+.hint_box h3 {
+    font-size: .426667rem;
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    border-bottom: 1px solid #f3f3f3;
+    text-align: center;
+}
+
+.hint_box_list li {
+    padding: 0 .4rem .533333rem;
+    border-bottom: 1px solid #f3f3f3;
+}
+
+.hint_box_list li h4 {
+    height: 1.2rem;
+    line-height: 1.2rem;
+    font-size: .4rem;
+}
+
+.hint_box_list li p {
+    font-size: .373333rem;
+    color: #333;
+}
+
+.hint_box_list li h4 i {
+    color: #f32555;
+    display: inline-block;
+    margin-right: .2rem;
+}
+
+.mykonw {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1.2rem;
+    display: block;
+    text-align: center;
+    color: #f32555;
+    font-size: .373333rem;
+}

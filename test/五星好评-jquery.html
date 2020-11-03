@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery3.5.1.min.js"></script>
+</head>
+
+<body>
+    <input type="text" name="star" value="">
+    <button value="1">一星</button>
+    <button value="2">一星</button>
+    <button value="3">一星</button>
+    <button value="4">一星</button>
+    <button value="5">一星</button>
+
+    <script>
+        $(function() {
+            $('button').click(function() {
+                console.log(1);
+                // $('button').css('backgroundColor', '');
+                // $(this).css('backgroundColor', 'red');
+                // $(this).prevAll('button').css('backgroundColor', 'red');
+                // console.log($(this).prevAll('button').length + 1);
+
+
+
+                $("input[name='star']").val($(this).index());
+
+
+                $(this).css('backgroundColor', 'red').siblings().css('backgroundColor', '');
+
+                $(this).prevAll('button').css({
+                    backgroundColor: 'red'
+                });
+
+            })
+        })
+    </script>
+
+</body>
+
+</html>

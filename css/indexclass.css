@@ -1,0 +1,216 @@
+/* 首页-分类  */
+
+.search-content {
+    display: flex;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 10rem;
+    height: 1.333333rem;
+    background-color: #fff;
+}
+
+.backhome {
+    content: "\e66e";
+    font-family: "iconfont" !important;
+    font-size: .9rem;
+    font-style: normal;
+    width: .8rem;
+    height: .8rem;
+    line-height: .8rem;
+    margin: .266667rem;
+    color: #999;
+}
+
+.search-content div {
+    flex: 1;
+    position: relative;
+}
+
+.search-content div input {
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: .8rem;
+    font-size: .32rem;
+    background-color: #f0f0f0;
+    margin-top: .266667rem;
+    border-radius: .4rem;
+    color: #999;
+    padding-left: 1rem;
+    box-sizing: border-box;
+}
+
+.search-content div input::-webkit-input-placeholder {
+    color: #999;
+}
+
+.search-content div::before {
+    position: absolute;
+    content: "\e63f";
+    font-family: "iconfont" !important;
+    width: .36rem;
+    height: .36rem;
+    font-size: .36rem;
+    top: .486667rem;
+    left: .3rem;
+    color: #999;
+}
+
+.search-btn {
+    width: 1rem;
+    height: .8rem;
+    margin: .266667rem .2rem 0;
+    color: #333;
+    text-align: center;
+    line-height: 2em;
+    font-size: .4rem;
+    text-decoration: underline;
+}
+
+.main-content {
+    overflow: hidden;
+    margin-top: 1.333333rem;
+}
+
+
+/* 商品查询条件  综合-新品  销量  价格 品牌 */
+
+.shopnavbox {
+    /* position: relative; */
+    /* height: .933333rem; */
+    background-color: #fafafa;
+}
+
+.shopnav {
+    display: flex;
+    justify-content: space-around;
+}
+
+.shopnav li {
+    text-align: center;
+    line-height: .933333rem;
+}
+
+.shopnav li a {
+    text-decoration: underline;
+    color: #787878;
+    font-size: .32rem;
+}
+
+.shopnav li:nth-child(4)::after {
+    content: "\e6b7";
+    font-family: "iconfont" !important;
+    height: .933333rem;
+    width: .933333rem;
+    font-size: .24rem;
+    color: #787878;
+}
+
+.shopnav li.cur a {
+    color: #f32555;
+}
+
+.where-pinpai {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 10rem;
+    height: 20rem;
+    background: rgba(0, 0, 0, .3);
+    margin-top: 2.933333rem;
+    /* overflow-y: hidden; */
+}
+
+.bgfff {
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.where-pinpai nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.where-pinpai nav a {
+    width: 3.066667rem;
+    margin: .173333rem .8rem;
+    text-align: center;
+    font-size: .16rem;
+    background-color: #f3f3f3;
+    border-radius: .2rem;
+    padding: .16rem 0;
+    color: #333;
+}
+
+.where-pinpai nav a.cur {
+    background-color: #f32555;
+    color: #fff;
+}
+
+.where-pinpai footer {
+    display: flex;
+    margin: .3rem 0;
+}
+
+.where-pinpai footer span {
+    width: 50%;
+}
+
+footer span a {
+    width: 2.666667rem;
+    height: .72rem;
+    line-height: .72rem;
+    font-size: .16rem;
+    text-align: center;
+    /* padding: .08rem 0; */
+    color: #fff;
+}
+
+footer span:nth-child(1) a {
+    float: right;
+    border-radius: .36rem 0 0 .36rem;
+    background-color: #ffc637;
+}
+
+footer span:nth-child(2) a {
+    float: left;
+    border-radius: 0 .36rem .36rem 0;
+    background-color: #f32555;
+}
+
+.main-content h2 {
+    margin: .3rem .4rem;
+    font-size: .2rem;
+}
+
+.main-content h2 a {
+    float: right;
+    font-family: "iconfont" !important;
+    color: #999;
+    margin-right: .2rem;
+}
+
+.latesearch {
+    overflow: hidden;
+    margin: .3rem 0.4rem;
+    height: 2.4rem;
+}
+
+.latesearch a {
+    float: left;
+    width: 1.6rem;
+    height: .64rem;
+    line-height: .64rem;
+    border-radius: .32rem;
+    box-sizing: border-box;
+    border: 1px solid #bfbfbf;
+    color: #333;
+    font-size: .16rem;
+    text-align: center;
+    margin: .28rem .4rem .28rem 0;
+}

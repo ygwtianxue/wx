@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>使用jsencrypt执行OpenSSL的RSA加密，解密</title>
+</head>
+<!--引入jsencrypt.js-->
+<!-- <script src="https://cdn.bootcss.com/jsencrypt/3.0.0-beta.1/jsencrypt.js"></script> -->
+<script src="js/jsencrypt.js"></script>
+<script type="text/javascript">
+    //公钥
+    var PUBLIC_KEY = 'MFwwDQYJKoZIhvcNAQEBBQADSwAwSAJBAJDo2w9G390N+LXTIcFvASarq+dKX8NtpBxP01pKwcgQN3KYVy3xAF0bAERfB/uBoB6pllWx1OT5o1T4p7jN1GcCAwEAAQ==';
+
+    //使用公钥加密
+    var encrypt = new JSEncrypt();
+    //encrypt.setPrivateKey('-----BEGIN RSA PRIVATE KEY-----'+PRIVATE_KEY+'-----END RSA PRIVATE KEY-----');
+    encrypt.setPublicKey('-----BEGIN PUBLIC KEY-----' + PUBLIC_KEY + '-----END PUBLIC KEY-----');
+    var encrypted = encrypt.encrypt('123456');
+    console.log('加密后数据:%o', encrypted);
+
+    var zengshi = 'gzB1diuUoEMUzRcQUqpw3rSceAEfQNXdd3gnbRSE9PMYJATxrQxeLx/AsPjlce61FjsUVlCFd2kpDuqNV1daTg==';
+    console.log(zengshi);
+    if (zengshi == encrypted) {
+        console.log('是正确的。');
+    }
+</script>
+
+</html>
